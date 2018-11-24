@@ -1,0 +1,1 @@
+﻿alter table child_table_january

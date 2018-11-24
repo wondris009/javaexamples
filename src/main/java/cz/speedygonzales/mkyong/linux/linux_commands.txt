@@ -1,0 +1,67 @@
+How To Check Hard Disk Size On Linux (Solution)
+-----------------------------------------------
+
+So, how much is my hard disk size left? To check file sizes in *nix system, use the command "df -h"
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+How To Check Directory File Size On Linux (Solution)
+----------------------------------------------------
+
+hmm… linux whatever also in command line, it really make me uncomfortable, i even need to issue a command to check a directory size.
+
+du -lh
+P.S
+always issue -h to display file size in human readable format
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+How To Copy Entire Directory In Linux
+-------------------------------------
+
+Command is simple, here i provide two samples to show how to copy entire directory in linux.
+
+cp -r sourcedir targetdir
+
+1) Copy anything from current directory to /usr/local/download
+cp -r * /usr/local/download
+
+2) Copy whole directory (include content) /usr/local/fromdownload to target /usr/local/download
+cp -r  /usr/local/fromdownload  /usr/local/download
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+Find A Package With Apt Command – Ubuntu
+----------------------------------------
+
+apt-get install is a useful command in Ubuntu, it can help user easily install application, it just like yum in fedora core.however, sometime we do not
+know exactly what package name to be install. Here is apt-cache search come to place and solve it. We can search a package name available to install with following command
+
+sudo apt-cache search <package-name>
+
+For example, i want to install java sdk in Ubuntu, but i do not know the exatly package name to install, i can issue following command to search “java sdk”.
+
+sudo apt-cache search java sdk
+
+
+Got it, just install it with following command
+
+sudo apt-get install sun-java6-sdk
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+How To Check Linux / Unix Distribution Version
+----------------------------------------------
+Today my boss ask me install a tomcat in linux machine. After i ssh into that machine, i wonder what is the Linux distribution version? Red Hat? Ubuntu? Fedora? Debian?
+However with a simple command, i can check what is linux distribution version
+
+mymachine:~# cat /proc/version
+Linux version 2.6.18-5-686-bigmem (Debian 2.6.18.dfsg.1-13etch3) (dannf@debian.org)
+(gcc version 4.1.2 20061115 (prerelease) (Debian 4.1.1-21))
+#1 SMP Wed Sep 26 19:03:46 UTC 2007
+mymachine:~#
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+How To Check Linux CPU Information
+----------------------------------
+Linux CPU information is store in /proc/cpuinfo, we can check our Linux CPU information by issue following command
+
+cat /proc/cpuinfo
+
+------------------------------------------------------------------------------------------------------------------------------------------------

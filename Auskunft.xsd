@@ -1,0 +1,532 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:element name="Auskunft" type="AuskunftType"/>
+  <xs:complexType name="XMLVersionType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="versionsnummer"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="auftraggeberBrancheType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="produktType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:short" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="produktergebnisType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="anredeType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="PersonType">
+    <xs:sequence>
+      <xs:element type="anredeType" name="anrede"/>
+      <xs:element type="xs:string" name="vorname"/>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="xs:string" name="geburtsdatum"/>
+      <xs:element type="xs:string" name="geburtsname" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdresseType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="strasse"/>
+      <xs:element type="xs:byte" name="hausnummer"/>
+      <xs:element type="xs:int" name="plz"/>
+      <xs:element type="xs:string" name="ort"/>
+      <xs:element type="xs:string" name="laenderkennzeichen"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdressenType">
+    <xs:sequence>
+      <xs:element type="AdresseType" name="Adresse"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="berechtigtesInteresseType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="EingabedatenType">
+    <xs:sequence>
+      <xs:element type="PersonType" name="Person"/>
+      <xs:element type="AdressenType" name="Adressen"/>
+      <xs:element type="berechtigtesInteresseType" name="berechtigtesInteresse"/>
+      <xs:element type="xs:string" name="geschaeftszeichen"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AuftragModulType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="auftragNummer"/>
+      <xs:element type="xs:string" name="auftragErstellungsdatum"/>
+      <xs:element type="xs:string" name="auftragErstellungsuhrzeit"/>
+      <xs:element type="xs:int" name="auftraggeberKundennummer"/>
+      <xs:element type="auftraggeberBrancheType" name="auftraggeberBranche"/>
+      <xs:element type="produktType" name="produkt"/>
+      <xs:element type="produktergebnisType" name="produktergebnis"/>
+      <xs:element type="xs:string" name="sprache"/>
+      <xs:element type="EingabedatenType" name="Eingabedaten"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="adressvalidierungsstatusGrobType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="AdresskontrolleType">
+    <xs:sequence>
+      <xs:element type="AdresseType" name="Adresse"/>
+      <xs:element type="adressvalidierungsstatusGrobType" name="adressvalidierungsstatusGrob"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdresskontrollenType">
+    <xs:sequence>
+      <xs:element type="AdresskontrolleType" name="Adresskontrolle"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdresskontrollModulType">
+    <xs:sequence>
+      <xs:element type="AdresskontrollenType" name="Adresskontrollen"/>
+      <xs:element type="xs:string" name="existenz"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="vcNameType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:short" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="negativmerkmalstypType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="negativmerkmalType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:short" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="amtsgerichtType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:short" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="GerichtsmerkmalType">
+    <xs:sequence>
+      <xs:element type="PersonType" name="Person"/>
+      <xs:element type="AdresseType" name="Adresse"/>
+      <xs:element type="xs:long" name="crefonummer"/>
+      <xs:element type="vcNameType" name="vcName"/>
+      <xs:element type="negativmerkmalstypType" name="negativmerkmalstyp"/>
+      <xs:element type="negativmerkmalType" name="negativmerkmal"/>
+      <xs:element type="amtsgerichtType" name="amtsgericht"/>
+      <xs:element type="xs:string" name="meldedatum"/>
+      <xs:element type="xs:string" name="anlageNegativmerkmal"/>
+      <xs:element type="xs:string" name="uebertragenesMerkmal"/>
+      <xs:element type="xs:string" name="aktenzeichen"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GerichtsmerkmaleType">
+    <xs:sequence>
+      <xs:element type="GerichtsmerkmalType" name="Gerichtsmerkmal" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GerichtsdatenModulType">
+    <xs:sequence>
+      <xs:element type="GerichtsmerkmaleType" name="Gerichtsmerkmale"/>
+      <xs:element type="xs:byte" name="anzahlNegativmerkmaleGesamt"/>
+      <xs:element type="xs:byte" name="anzahlVerfahren"/>
+      <xs:element type="xs:byte" name="anzahlEinzelmerkmale"/>
+      <xs:element type="xs:string" name="existenz"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verfahrensartType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="HauptforderungPlanType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="wert"/>
+      <xs:element type="xs:string" name="waehrung"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="erledigungskennzeichenType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="InkassomerkmalType">
+    <xs:sequence>
+      <xs:element type="PersonType" name="Person"/>
+      <xs:element type="AdressenType" name="Adressen"/>
+      <xs:element type="xs:long" name="crefonummer"/>
+      <xs:element type="vcNameType" name="vcName"/>
+      <xs:element type="xs:byte" name="aktennummer"/>
+      <xs:element type="verfahrensartType" name="verfahrensart"/>
+      <xs:element type="xs:string" name="inkassotyp"/>
+      <xs:element type="HauptforderungPlanType" name="HauptforderungPlan"/>
+      <xs:element type="xs:string" name="eingangsdatum"/>
+      <xs:element type="xs:string" name="verzugsdatum"/>
+      <xs:element type="xs:string" name="erledigungsdatum" minOccurs="0"/>
+      <xs:element type="erledigungskennzeichenType" name="erledigungskennzeichen"/>
+      <xs:element type="xs:string" name="uebertragenesMerkmal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GerichtlicheInkassomerkmaleType">
+    <xs:sequence>
+      <xs:element type="InkassomerkmalType" name="Inkassomerkmal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VorgerichtlicheInkassomerkmaleType">
+    <xs:sequence>
+      <xs:element type="InkassomerkmalType" name="Inkassomerkmal" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InkassodatenModulType">
+    <xs:sequence>
+      <xs:element type="GerichtlicheInkassomerkmaleType" name="GerichtlicheInkassomerkmale"/>
+      <xs:element type="VorgerichtlicheInkassomerkmaleType" name="VorgerichtlicheInkassomerkmale"/>
+      <xs:element type="xs:byte" name="anzahlInkassoverfahrenGesamt"/>
+      <xs:element type="xs:byte" name="anzahlAbgeschlossenerInkassoverfahrenGesamt"/>
+      <xs:element type="xs:string" name="existenz"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="brancheType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="kontoverwendungType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="finanzierungsgrundType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="zahlungsartType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="zahlungsrhythmusType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="schlechtesterKontostatusType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="aktuellerKontostatusType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="SaldoType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="wert"/>
+      <xs:element type="xs:string" name="waehrung"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saldotypType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="KontoType">
+    <xs:sequence>
+      <xs:element type="PersonType" name="Person"/>
+      <xs:element type="AdressenType" name="Adressen"/>
+      <xs:element type="brancheType" name="branche"/>
+      <xs:element type="kontoverwendungType" name="kontoverwendung"/>
+      <xs:element type="finanzierungsgrundType" name="finanzierungsgrund"/>
+      <xs:element type="xs:string" name="kontonummer"/>
+      <xs:element type="xs:string" name="vorgangsnummer"/>
+      <xs:element type="xs:string" name="einwilligungsklausel"/>
+      <xs:element type="xs:string" name="startdatum"/>
+      <xs:element type="xs:byte" name="vertragslaufzeit"/>
+      <xs:element type="zahlungsartType" name="zahlungsart"/>
+      <xs:element type="zahlungsrhythmusType" name="zahlungsrhythmus"/>
+      <xs:element type="xs:string" name="aktualisierungsmonat"/>
+      <xs:element type="schlechtesterKontostatusType" name="schlechtesterKontostatus"/>
+      <xs:element type="xs:string" name="merkmalsdatumSchlechtesterKontostatus"/>
+      <xs:element type="aktuellerKontostatusType" name="aktuellerKontostatus"/>
+      <xs:element type="xs:string" name="merkmalsdatumAktuellerKontostatus"/>
+      <xs:element type="SaldoType" name="Saldo"/>
+      <xs:element type="saldotypType" name="saldotyp"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="KontenType">
+    <xs:sequence>
+      <xs:element type="KontoType" name="Konto"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="KontendatenModulNegativType">
+    <xs:sequence>
+      <xs:element type="KontenType" name="Konten"/>
+      <xs:element type="xs:byte" name="anzahl"/>
+      <xs:element type="xs:string" name="existenz"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verflechtungseigenschaftType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="GeldbetragType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="wert"/>
+      <xs:element type="xs:string" name="waehrung"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VerflechtungsbetragType">
+    <xs:sequence>
+      <xs:element type="GeldbetragType" name="Geldbetrag"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verflechtungsbeteiligtenartType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="zustaendigerVCNameType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:short" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="firmenrechtsformType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:short" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="VerflechtungszielType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="firmenname1"/>
+      <xs:element type="AdresseType" name="Adresse"/>
+      <xs:element type="xs:long" name="crefoZiel"/>
+      <xs:element type="zustaendigerVCNameType" name="zustaendigerVCName"/>
+      <xs:element type="firmenrechtsformType" name="firmenrechtsform"/>
+      <xs:element type="xs:string" name="datumLetzteFirmenrecherche"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VerflechtungType">
+    <xs:sequence>
+      <xs:element type="verflechtungseigenschaftType" name="verflechtungseigenschaft"/>
+      <xs:element type="VerflechtungsbetragType" name="Verflechtungsbetrag" minOccurs="0"/>
+      <xs:element type="verflechtungsbeteiligtenartType" name="verflechtungsbeteiligtenart"/>
+      <xs:element type="VerflechtungszielType" name="Verflechtungsziel"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VerflechtungenType">
+    <xs:sequence>
+      <xs:element type="VerflechtungType" name="Verflechtung" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonVerflechtungType">
+    <xs:sequence>
+      <xs:element type="PersonType" name="Person"/>
+      <xs:element type="AdressenType" name="Adressen"/>
+      <xs:element type="xs:long" name="crefonummer"/>
+      <xs:element type="vcNameType" name="vcName"/>
+      <xs:element type="VerflechtungenType" name="Verflechtungen"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VerflechtungsdatenModulType">
+    <xs:sequence>
+      <xs:element type="PersonVerflechtungType" name="PersonVerflechtung"/>
+      <xs:element type="xs:byte" name="anzahl"/>
+      <xs:element type="xs:string" name="existenz"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RechercheMerkmalType">
+    <xs:sequence>
+      <xs:element type="PersonType" name="Person"/>
+      <xs:element type="AdressenType" name="Adressen"/>
+      <xs:element type="xs:long" name="crefonummer"/>
+      <xs:element type="vcNameType" name="vcName"/>
+      <xs:element type="xs:string" name="rechercheDatum"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RechercheMerkmaleType">
+    <xs:sequence>
+      <xs:element type="RechercheMerkmalType" name="RechercheMerkmal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecherchedatenModulType">
+    <xs:sequence>
+      <xs:element type="RechercheMerkmaleType" name="RechercheMerkmale"/>
+      <xs:element type="xs:byte" name="anzahl"/>
+      <xs:element type="xs:string" name="existenz"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="adresstypType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="adressquelleType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="adressbereichType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="AnschriftType">
+    <xs:sequence>
+      <xs:element type="AdressenType" name="Adressen"/>
+      <xs:element type="xs:string" name="adresslieferungsdatum"/>
+      <xs:element type="xs:byte" name="anzahlDatenlieferantenVVC"/>
+      <xs:element type="xs:byte" name="anzahlDatenlieferantenKonten"/>
+      <xs:element type="adresstypType" name="adresstyp"/>
+      <xs:element type="adressquelleType" name="adressquelle"/>
+      <xs:element type="adressbereichType" name="adressbereich"/>
+      <xs:element type="xs:string" name="kennzeichenFirmenadresse"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AnschriftenType">
+    <xs:sequence>
+      <xs:element type="AnschriftType" name="Anschrift" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AnschriftenModulType">
+    <xs:sequence>
+      <xs:element type="AnschriftenType" name="Anschriften"/>
+      <xs:element type="xs:byte" name="anzahlAktuelleAnschriften"/>
+      <xs:element type="xs:byte" name="anzahl"/>
+      <xs:element type="xs:string" name="existenz"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="identifizierungType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="IdentModulType">
+    <xs:sequence>
+      <xs:element type="identifizierungType" name="identifizierung"/>
+      <xs:element type="xs:string" name="existenz"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="scoreTypType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ampelType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ScoreType">
+    <xs:sequence>
+      <xs:element type="scoreTypType" name="scoreTyp"/>
+      <xs:element type="xs:int" name="wert"/>
+      <xs:element type="ampelType" name="ampel"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScoresType">
+    <xs:sequence>
+      <xs:element type="ScoreType" name="Score"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScoreModulType">
+    <xs:sequence>
+      <xs:element type="ScoresType" name="Scores"/>
+      <xs:element type="xs:string" name="existenz"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModuleType">
+    <xs:sequence>
+      <xs:element type="AuftragModulType" name="AuftragModul"/>
+      <xs:element type="AdresskontrollModulType" name="AdresskontrollModul"/>
+      <xs:element type="GerichtsdatenModulType" name="GerichtsdatenModul"/>
+      <xs:element type="InkassodatenModulType" name="InkassodatenModul"/>
+      <xs:element type="KontendatenModulNegativType" name="KontendatenModulNegativ"/>
+      <xs:element type="VerflechtungsdatenModulType" name="VerflechtungsdatenModul"/>
+      <xs:element type="RecherchedatenModulType" name="RecherchedatenModul"/>
+      <xs:element type="AnschriftenModulType" name="AnschriftenModul"/>
+      <xs:element type="IdentModulType" name="IdentModul"/>
+      <xs:element type="ScoreModulType" name="ScoreModul"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AuskunftType">
+    <xs:sequence>
+      <xs:element type="XMLVersionType" name="XMLVersion"/>
+      <xs:element type="ModuleType" name="Module"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
