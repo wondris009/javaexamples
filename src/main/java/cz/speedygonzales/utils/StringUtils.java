@@ -51,16 +51,4 @@ public class StringUtils {
 
         return sb.toString();
     }
-
-    public void logMessage(String msg, Object logLevel) {
-
-
-        System.out.println(msg);
-    }
-
-    public void logMessage(String msg) {
-        logMessage(msg, null);
-    }
-
-
 }

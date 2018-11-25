@@ -20,7 +20,6 @@ repositories {
 
 
 dependencies {
-    // https://mvnrepository.com/artifact/xerces/xercesImpl
     compile group: 'xerces', name: 'xercesImpl', version: '2.12.0'
     
     compile('org.apache.commons:commons-lang3:3.3.2')
@@ -37,8 +36,9 @@ dependencies {
 
     compile 'org.projectlombok:lombok:1.18.2'
 
-    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
-    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    compile group: 'org.slf4j', name:'slf4j-api', version: '1.7.25'
+    compile group: 'ch.qos.logback', name:'logback-classic', version: '1.2.3'
+    compile group: 'ch.qos.logback', name:'logback-core', version: '1.2.3'
 
     compile('junit:junit:4.12') //CompletableFutureDemo
     testCompile('junit:junit:4.12')

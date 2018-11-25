@@ -1,19 +1,17 @@
 package cz.speedygonzales.designpatterns.adapter;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author vondracek
  * @since 25.10.2015 10:15
  */
+@Slf4j
 public class Mp4Player implements AdvancedMediaPlayer {
-
-    private static final Logger LOG = LoggerFactory.getLogger(Mp4Player.class);
 
     public void playMp4(String fileName) {
 
-        LOG.info("> playing MP4 file {}", fileName);
+        log.info("> playing MP4 file {}", fileName);
     }
 
     public void playVlc(String fileName) {

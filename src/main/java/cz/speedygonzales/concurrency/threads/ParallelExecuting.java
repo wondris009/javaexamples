@@ -16,7 +16,7 @@ public class ParallelExecuting {
 
         System.out.println("start app");
 
-        File allDirectories = new File("c:/tmp/dir/");
+        File allDirectories = new File("/Users/vondracek/tmp/");
 
         File[] directories = allDirectories.listFiles();
 

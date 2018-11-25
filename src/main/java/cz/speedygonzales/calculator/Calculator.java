@@ -56,7 +56,7 @@ public class Calculator {
         return sum;
     }
 
-    double calculate(Operation operation, double a, double b) throws Exception {
+    private double calculate(Operation operation, double a, double b) throws Exception {
         if (b == 0) {
             throw new Exception("Cant divide by " + b);
         }
@@ -76,7 +76,7 @@ public class Calculator {
         throw new Exception("Can't locate operand in instruction " + line);
     }
 
-    Operation getOperation(String line) {
+    private Operation getOperation(String line) {
 
         String operationName = line.split(" ")[0].trim();
 

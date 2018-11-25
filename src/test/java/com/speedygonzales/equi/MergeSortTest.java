@@ -1,7 +1,7 @@
 package com.speedygonzales.equi;
 
 import cz.speedygonzales.equi.MergeSort;
-import junit.framework.Assert;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -10,9 +10,9 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 import java.util.Random;
 
-/**
+//import junit.framework.Assert;
 
- *
+/**
  * @author vondracek
  * @since 20.4.15 16:20
  */

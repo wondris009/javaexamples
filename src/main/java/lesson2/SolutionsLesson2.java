@@ -18,6 +18,7 @@ import java.util.stream.Stream;
  * @author Speakjava (Simon Ritter)
  */
 public class SolutionsLesson2 {
+
     private static final String WORD_REGEXP = "[- .:,]+";
 
     /**

@@ -29,7 +29,7 @@ public class CompletableFutureDemo {
         thenAcceptAsyncExample();
     }
 
-    static void completedFutureExample() {
+    private static void completedFutureExample() {
 
         CompletableFuture cf = CompletableFuture.completedFuture("message");
 
@@ -37,7 +37,7 @@ public class CompletableFutureDemo {
         assertEquals("message", cf.getNow(null));
     }
 
-    static void returnAsyncExample() throws InterruptedException {
+    private static void returnAsyncExample() throws InterruptedException {
 
         CompletableFuture cf = CompletableFuture.runAsync(() -> {
             assertTrue(Thread.currentThread().isDaemon());
@@ -53,7 +53,7 @@ public class CompletableFutureDemo {
     }
 
 
-    static void thenApplyExample() {
+    private static void thenApplyExample() {
         CompletableFuture cf = CompletableFuture.completedFuture("message").thenApply(s -> {
             assertFalse(Thread.currentThread().isDaemon());
             return s.toUpperCase();
@@ -61,7 +61,7 @@ public class CompletableFutureDemo {
         assertEquals("MESSAGE", cf.getNow(null));
     }
 
-    static void thenApplyAsyncExample() {
+    private static void thenApplyAsyncExample() {
         CompletableFuture cf = CompletableFuture.completedFuture("message").thenApplyAsync(s -> {
             assertTrue(Thread.currentThread().isDaemon());
             try {
@@ -75,7 +75,7 @@ public class CompletableFutureDemo {
         assertEquals("MESSAGE", cf.join());
     }
 
-    static void thenApplyAsyncWithExecutorExample() {
+    private static void thenApplyAsyncWithExecutorExample() {
         CompletableFuture cf = CompletableFuture.completedFuture("message").thenApplyAsync(s -> {
             assertTrue(Thread.currentThread().getName().startsWith("custom-executor-"));
             assertFalse(Thread.currentThread().isDaemon());
@@ -91,7 +91,7 @@ public class CompletableFutureDemo {
         assertEquals("MESSAGE", cf.join());
     }
 
-    static void thenAcceptAsyncExample() {
+    private static void thenAcceptAsyncExample() {
         StringBuilder result = new StringBuilder();
         CompletableFuture cf = CompletableFuture.completedFuture("thenAcceptAsync message")
                 .thenAcceptAsync(s -> result.append(s.toUpperCase()));
@@ -101,13 +101,13 @@ public class CompletableFutureDemo {
     }
 
 
-    static void randomSleep() throws InterruptedException {
+    private static void randomSleep() throws InterruptedException {
         Random r = new Random();
         Thread.sleep(r.nextInt(100));
 
     }
 
-    static void sleepEnough() throws InterruptedException {
+    private static void sleepEnough() throws InterruptedException {
         Thread.sleep(2000);
     }
 

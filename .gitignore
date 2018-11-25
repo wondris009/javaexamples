@@ -1,0 +1,14 @@
+# IDEA
+/.idea/*
+# share encoding settings
+!/.idea/encodings.xml
+*.iml
+
+# IDEA compilation output
+/build/
+/out/**
+
+# Gradle
+.gradle/
+/*/build/
+gradlew*

@@ -19,6 +19,7 @@ import java.util.stream.Stream;
  * @author Speakjava (Simon Ritter)
  */
 public class Lesson2 {
+
     private static final String WORD_REGEXP = "[- .:,]+";
 
     /**
@@ -26,7 +27,7 @@ public class Lesson2 {
      *
      * @throws java.io.IOException
      */
-    public void runExercises() throws IOException {
+    private void runExercises() throws IOException {
         System.out.println("JDK 8 Lambdas and Streams MOOC Lesson 2");
         System.out.println("Running exercise 1 solution...");
         exercise1();
