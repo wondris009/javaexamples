@@ -1,6 +1,5 @@
-package com.speedygonzales.equi;
+package cz.speedygonzales.equi;
 
-import cz.speedygonzales.equi.BubbleSort;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;

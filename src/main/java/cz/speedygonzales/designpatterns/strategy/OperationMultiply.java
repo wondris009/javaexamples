@@ -1,4 +1,4 @@
-package cz.speedygonzales.designpatterns.strategypattern;
+package cz.speedygonzales.designpatterns.strategy;
 
 /**
  * @author vondracek

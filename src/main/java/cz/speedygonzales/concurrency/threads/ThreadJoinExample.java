@@ -1,11 +1,14 @@
 package cz.speedygonzales.concurrency.threads;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * Created by: vondracek - 25.2.14 13:49
  */
-public class ThreadsTestingClass {
+@Slf4j
+public class ThreadJoinExample {
 
-    public static class MyRunnable implements Runnable {
+    public static class MyRunnable extends Thread {
 
         private ThreadLocal<Integer> threadLocal = ThreadLocal.withInitial(() -> (int) (Math.random() * 100d));
 
@@ -24,8 +27,8 @@ public class ThreadsTestingClass {
     public static void main(String[] args) throws InterruptedException {
         MyRunnable sharedRunnableInstance = new MyRunnable();
 
-        Thread thread1 = new Thread(sharedRunnableInstance);
-        Thread thread2 = new Thread(sharedRunnableInstance);
+        Thread thread1 = new Thread(sharedRunnableInstance,"t1");
+        Thread thread2 = new Thread(sharedRunnableInstance, "t2");
 
         thread1.start();
         thread2.start();

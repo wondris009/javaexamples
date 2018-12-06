@@ -1,4 +1,4 @@
-package com.speedygonzales.demo;
+package cz.speedygonzales.demo;
 
 import org.junit.Ignore;
 import org.junit.Test;

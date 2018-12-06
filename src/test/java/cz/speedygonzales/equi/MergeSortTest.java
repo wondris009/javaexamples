@@ -1,6 +1,5 @@
-package com.speedygonzales.equi;
+package cz.speedygonzales.equi;
 
-import cz.speedygonzales.equi.MergeSort;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

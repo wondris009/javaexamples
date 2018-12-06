@@ -1,4 +1,4 @@
-package com.speedygonzales.codility;
+package cz.speedygonzales.codility;
 
 import cz.speedygonzales.codility.StringCalculator;
 import org.junit.Assert;
