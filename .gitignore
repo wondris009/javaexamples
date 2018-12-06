@@ -1,7 +1,7 @@
 # IDEA
-/.idea/*
-# share encoding settings
-!/.idea/encodings.xml
+.idea/*
+.idea/vcs.xml
+.idea/encodings.xml
 *.iml
 
 # IDEA compilation output
