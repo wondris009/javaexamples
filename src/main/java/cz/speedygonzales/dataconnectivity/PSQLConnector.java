@@ -16,31 +16,19 @@ public class PSQLConnector {
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
+            //do nothing
         }
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/mkyong", "postgres", "root");
-
             Statement statement = connection.createStatement();
-
             ResultSet rs = statement.executeQuery("select * from time_test");
-
             while (rs.next()) {
-
                 Date date = rs.getDate("created");
-
-
                 log.info(date.toString());
-
-
             }
-
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
     }
-
 }
