@@ -1,6 +1,7 @@
-package cz.speedygonzales.javaeffective.builderpattern;
+package cz.speedygonzales.designpatterns.builder;
 
-public class NutritionFacts {
+public class NutritionFactsBuilderPatternDemo {
+
     private final int servingSize;
     private final int servings;
     private final int calories;
@@ -19,12 +20,12 @@ public class NutritionFacts {
         private int sodium = 0;
         private int carbohydrate = 0;
 
-        public Builder(int servingSize, int servings) {
+        Builder(int servingSize, int servings) {
             this.servingSize = servingSize;
             this.servings = servings;
         }
 
-        public Builder calories(int val) {
+        Builder calories(int val) {
             calories = val;
             return this;
         }
@@ -44,12 +45,12 @@ public class NutritionFacts {
             return this;
         }
 
-        public NutritionFacts build() {
-            return new NutritionFacts(this);
+        public NutritionFactsBuilderPatternDemo build() {
+            return new NutritionFactsBuilderPatternDemo(this);
         }
     }
 
-    private NutritionFacts(Builder builder) {
+    private NutritionFactsBuilderPatternDemo(Builder builder) {
         servingSize = builder.servingSize;
         servings = builder.servings;
         calories = builder.calories;
@@ -60,6 +61,7 @@ public class NutritionFacts {
 
     public static void main(String[] args) {
 
-        NutritionFacts ns = new NutritionFacts.Builder(240, 20).sodium(34).calories(20).build();
+        //usage
+        new NutritionFactsBuilderPatternDemo.Builder(240, 20).sodium(34).calories(20).build();
     }
 }
