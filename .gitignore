@@ -12,3 +12,5 @@
 .gradle/
 /*/build/
 gradlew*
+
+src/main/java/cz/speedygonzales/testing/TestingClass*
