@@ -2,9 +2,7 @@ package cz.speedygonzales.refactoringfowler.step001
 
 import spock.lang.Specification
 
-import static cz.speedygonzales.refactoringfowler.step001.Movie.CHILDRENS
-import static cz.speedygonzales.refactoringfowler.step001.Movie.NEW_RELEASE
-import static cz.speedygonzales.refactoringfowler.step001.Movie.REGULAR
+import static cz.speedygonzales.refactoringfowler.step001.Movie.*
 
 class CustomerSpec extends Specification {
 
@@ -14,7 +12,7 @@ class CustomerSpec extends Specification {
         given:
         def customer1 = new Customer('Peter')
         customer1.addRental(new Rental(new Movie('Batman', REGULAR), 10))
-        customer1.addRental(new Rental(new Movie('Locika', Movie.CHILDRENS), 30))
+        customer1.addRental(new Rental(new Movie('Locika', CHILDRENS), 30))
 
         def customer2 = new Customer('Rene')
         customer2.addRental(new Rental(new Movie('Superman', REGULAR), 10))
