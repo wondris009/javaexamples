@@ -12,7 +12,7 @@ class CustomerSpec extends Specification {
         given:
         def customer1 = new Customer('Peter')
         customer1.addRental(new Rental(new Movie('Batman', REGULAR), 10))
-        customer1.addRental(new Rental(new Movie('Locika', CHILDRENS), 30))
+        customer1.addRental(new Rental(new Movie('Locika', CHILDREN), 30))
 
         def customer2 = new Customer('Rene')
         customer2.addRental(new Rental(new Movie('Superman', REGULAR), 10))
@@ -22,7 +22,7 @@ class CustomerSpec extends Specification {
         def customer3 = new Customer('Luky')
         customer3.addRental(new Rental(new Movie('Film1', REGULAR), 7))
         customer3.addRental(new Rental(new Movie('Film2', NEW_RELEASE), 13))
-        customer3.addRental(new Rental(new Movie('Film3', CHILDRENS), 25))
+        customer3.addRental(new Rental(new Movie('Film3', CHILDREN), 25))
 
         when:
         def statement1 = customer1.statement()
