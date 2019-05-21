@@ -14,3 +14,7 @@
 gradlew*
 
 src/main/java/cz/speedygonzales/testing/TestingClass*
+
+target
+gen
+gradle
