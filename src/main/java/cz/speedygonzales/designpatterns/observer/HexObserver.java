@@ -2,13 +2,13 @@ package cz.speedygonzales.designpatterns.observer;
 
 class HexObserver extends Observer {
 
-    HexObserver(Subject subject) {
-        this.subject = subject;
-        subject.attach(this);
+    HexObserver(Monitor monitor) {
+        this.monitor = monitor;
+        monitor.attach(this);
     }
 
     @Override
     void update() {
-        System.out.println("Hex string " + Integer.toHexString(subject.getState()));
+        System.out.println("Hex string " + Integer.toHexString(monitor.getState()));
     }
 }

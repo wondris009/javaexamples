@@ -3,7 +3,7 @@ package cz.speedygonzales.designpatterns.observer;
 import java.util.ArrayList;
 import java.util.List;
 
-class Subject {
+class Monitor {
 
     private List<Observer> observers = new ArrayList<>();
 

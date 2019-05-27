@@ -6,14 +6,14 @@ public class ObserverPatternDemo {
 
     public static void main(String[] args) {
 
-        Subject subject = new Subject();
+        Monitor monitor = new Monitor();
 
-        new HexObserver(subject);
-        new BinaryObserver(subject);
+        new HexObserver(monitor);
+        new BinaryObserver(monitor);
 
         IntStream.iterate(0, i-> i + 5).limit(20).forEach(ranger -> {
             System.out.println("First state change: " + ranger);
-            subject.setState(ranger);
+            monitor.setState(ranger);
             System.out.println("");
         });
     }

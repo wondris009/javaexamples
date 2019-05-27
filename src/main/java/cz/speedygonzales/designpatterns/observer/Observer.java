@@ -2,6 +2,6 @@ package cz.speedygonzales.designpatterns.observer;
 
 abstract class Observer {
 
-    protected Subject subject;
+    protected Monitor monitor;
     abstract void update();
 }
