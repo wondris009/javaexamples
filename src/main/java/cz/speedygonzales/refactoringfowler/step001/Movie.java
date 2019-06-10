@@ -1,25 +1,42 @@
 package cz.speedygonzales.refactoringfowler.step001;
 
-public class Movie {
+class Movie {
 
     public static final int REGULAR = 0;
     public static final int NEW_RELEASE = 1;
     public static final int CHILDREN = 2;
 
     private String title;
-    private int priceCode;
+    private Price price;
 
     public Movie(String title, int priceCode) {
         this.title = title;
-        this.priceCode = priceCode;
+        setPriceCode(priceCode);
     }
 
-    public int getPriceCode() {
-        return priceCode;
+    double getCharge(int daysRented) {
+        return price.getCharge(daysRented);
     }
 
-    public void setPriceCode(int priceCode) {
-        this.priceCode = priceCode;
+    int getFrequentRenterPoints(int daysRented) {
+        return price.getFrequentRenterPoints(daysRented);
+    }
+
+    private void setPriceCode(int arg) {
+
+        switch (arg) {
+            case REGULAR:
+                price = new RegularPrice();
+                break;
+            case CHILDREN:
+                price = new ChildrenPrice();
+                break;
+            case NEW_RELEASE:
+                price = new NewReleasePrice();
+                break;
+            default:
+                throw new IllegalArgumentException("Incorrect Price Code");
+        }
     }
 
     public String getTitle() {
