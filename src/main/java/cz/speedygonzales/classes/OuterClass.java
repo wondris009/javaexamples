@@ -4,41 +4,39 @@ package cz.speedygonzales.classes;
  */
 public class OuterClass {
 
-    private String value;
-
-    public OuterClass(String value) {
-        this.value = value;
+    public OuterClass() {
+        System.out.println("OuterClass");
     }
 
-    class InnerClass {
-
-        private String value;
-
-        public InnerClass(String value) {
-            this.value = value;
-        }
+    private static class PrivateStaticInnerClass {
+        private String value = "PrivateStaticInnerClass";
     }
 
-    static class StaticClass {
+    protected static class ProtectedStaticInnerClass {
+        protected String value = "ProtectedStaticInnerClass";
+    }
 
-        private String value;
+    private class PrivateInnerClass {
 
-        public StaticClass(String value) {
-            this.value = value;
+        private void doSomething() {
+            System.out.println(this.toString());
         }
+
+
+
     }
 
     public static void main(String[] args) {
 
-        OuterClass outer = new OuterClass("outer");
+        OuterClass.PrivateStaticInnerClass psic = new PrivateStaticInnerClass();
+
+        System.out.println(psic.value);
+
+        OuterClass oc = new OuterClass();
+        PrivateInnerClass pic = oc.new PrivateInnerClass();
+        pic.doSomething();
+
     }
 
-    public void instant() {
 
-        InnerClass inner = new InnerClass("inner");
-
-        OuterClass outer = new OuterClass("outer");
-
-        StaticClass s = new StaticClass("static");
-    }
 }

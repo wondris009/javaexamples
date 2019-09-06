@@ -16,15 +16,16 @@ public class SportkaGenerator {
         RandomUtils ru = new RandomUtils();
 
         for (int j = 0; j < 10; j++) {
-
-            for (int i = 1; i < 7; i++) {
-                System.out.print(ru.printNumber(false, 48) + " ");
-            }
-            System.out.println("\n");
-
-
+            generateSportkaNumbers(ru);
         }
 
 
+    }
+
+    private static void generateSportkaNumbers(RandomUtils ru) {
+        for (int i = 1; i < 7; i++) {
+            System.out.print(ru.generateRandomNumber(false, 48) + " ");
+        }
+        System.out.println("\n");
     }
 }

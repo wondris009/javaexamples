@@ -22,7 +22,7 @@ public class RandomUtils {
      * @param highestNumber
      * @return
      */
-    public int printNumber(boolean fromZero, int highestNumber) {
+    public int generateRandomNumber(boolean fromZero, int highestNumber) {
 
         Random r = new Random();
 
