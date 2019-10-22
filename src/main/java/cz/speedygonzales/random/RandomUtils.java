@@ -1,6 +1,7 @@
 package cz.speedygonzales.random;
 
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,21 +12,18 @@ import java.util.Random;
  */
 public class RandomUtils {
 
+    private RandomUtils() {
+    }
+
     /**
      * If fromZero is set then it selects numbers from range 0 - highestNumber
      * <p>
      * otherwise
      * <p>
      * 1 - highestNumber+1
-     *
-     * @param fromZero
-     * @param highestNumber
      * @return
      */
-    public int generateRandomNumber(boolean fromZero, int highestNumber) {
-
-        Random r = new Random();
-
-        return (fromZero ? r.nextInt(highestNumber) : (r.nextInt(highestNumber) + 1));
+    public static int generateRandomNumber(int min, int max) {
+        return ThreadLocalRandom.current().nextInt(min, max);
     }
 }
