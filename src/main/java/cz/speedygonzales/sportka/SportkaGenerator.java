@@ -15,15 +15,16 @@ import java.util.stream.IntStream;
  */
 public class SportkaGenerator {
 
+    private static final int NUMBER_OF_ROWS = 100;
+
     public static void main(String[] args) {
-        for (int j = 0; j < 100; j++) {
+        for (int j = 0; j < NUMBER_OF_ROWS; j++) {
             System.out.println(generateSportkaNumbers());
         }
     }
 
     private static String generateSportkaNumbers() {
-
         List<Integer> sportkaNumbers = IntStream.range(1, 6).mapToObj(i -> RandomUtils.generateRandomNumber(1, 49)).collect(Collectors.toList());
-        return sportkaNumbers.stream().map(number -> number.toString()).collect(Collectors.joining(", "));
+        return sportkaNumbers.stream().map(Object::toString).collect(Collectors.joining(", "));
     }
 }
