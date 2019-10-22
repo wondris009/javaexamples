@@ -24,7 +24,7 @@ public class SportkaGenerator {
     }
 
     private static String generateSportkaNumbers() {
-        List<Integer> sportkaNumbers = IntStream.range(1, 6).mapToObj(i -> RandomUtils.generateRandomNumber(1, 49)).collect(Collectors.toList());
+        List<Integer> sportkaNumbers = IntStream.range(1, 6).mapToObj(i -> RandomUtils.generateRandomNumber(1, 50)).collect(Collectors.toList());
         return sportkaNumbers.stream().map(Object::toString).collect(Collectors.joining(", "));
     }
 }
