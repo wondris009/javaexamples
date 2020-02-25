@@ -7,7 +7,7 @@ class CalculatorSpec extends Specification {
     def 'should calculate numbers from input file'() {
 
         given:
-        def path = 'src/cz/speedygonzales/calculator/calculator-input.txt'
+        def path = new File(getClass().getResource('/calculator-input.txt').toURI()).absolutePath
 
         when:
         CalculatorDemo calculatorDemo = new CalculatorDemo()

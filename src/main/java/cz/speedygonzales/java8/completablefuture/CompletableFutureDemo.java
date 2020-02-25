@@ -8,6 +8,7 @@ import java.util.concurrent.ThreadFactory;
 
 import static org.junit.Assert.*;
 
+
 public class CompletableFutureDemo {
 
     static ExecutorService executor = Executors.newFixedThreadPool(3, new ThreadFactory() {

@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: cz.speedygonzales.dma.DMAInOutEqualizer
+Main-Class: com.speedygonzales.dma.DMAInOutEqualizer
 

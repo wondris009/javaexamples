@@ -27,15 +27,13 @@ public class Validator {
             throw new ValidationException("Specify input file.");
         }
 
-
-
         try {
-            Path inputFilePath = Paths.get(this.inputFilePath);
-            if(!Files.exists(inputFilePath) || Files.isRegularFile(inputFilePath) || Files.size(inputFilePath) == 0) {
+            Path path = Paths.get(inputFilePath);
+            if(!Files.exists(path) || !Files.isRegularFile(path) || Files.size(path) == 0) {
                 throw new ValidationException("Input file can't be read or is empty.");
             }
 
-            data = Files.readAllLines(inputFilePath);
+            data = Files.readAllLines(path);
         } catch (IOException e) {
             new ValidationException("Unable to read input data lines.");
         }

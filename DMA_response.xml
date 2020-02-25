@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Auskunft>
+    <XMLVersion>
+        <versionsnummer>01.00.00_2010-03-15</versionsnummer>
+    </XMLVersion>
+    <Module>
+        <AuftragModul>
+            <auftragNummer>P 181 000183216069</auftragNummer>
+            <auftragErstellungsdatum>18.12.2014</auftragErstellungsdatum>
+            <auftragErstellungsuhrzeit>10:01</auftragErstellungsuhrzeit>
+            <auftraggeberKundennummer>181000000</auftraggeberKundennummer>
+            <auftraggeberBranche id="006">Auskunfteien</auftraggeberBranche>
+            <produkt id="2117">BONIMA Pool Nr. 9 (C5166)</produkt>
+            <produktergebnis id="01">Produktgenerierung erfolgreich</produktergebnis>
+            <sprache>DE</sprache>
+            <Eingabedaten>
+                <Person>
+                    <anrede id="01">Herr</anrede>
+                    <vorname>Uno</vorname>
+                    <name>ACHT</name>
+                    <geburtsdatum>07.07.1955</geburtsdatum>
+                </Person>
+                <Adressen>
+                    <Adresse>
+                        <strasse>Hellersbergstr.</strasse>
+                        <hausnummer>14</hausnummer>
+                        <plz>41460</plz>
+                        <ort>Neuss</ort>
+                        <laenderkennzeichen>DE</laenderkennzeichen>
+                    </Adresse>
+                </Adressen>
+                <berechtigtesInteresse id="04">Forderung</berechtigtesInteresse>
+                <geschaeftszeichen>TEST_2117</geschaeftszeichen>
+            </Eingabedaten>
+        </AuftragModul>
+        <AdresskontrollModul>
+            <Adresskontrollen>
+                <Adresskontrolle>
+                    <Adresse>
+                        <strasse>Hellersbergstr.</strasse>
+                        <hausnummer>14</hausnummer>
+                        <plz>41460</plz>
+                        <ort>Neuss</ort>
+                        <laenderkennzeichen>DE</laenderkennzeichen>
+                    </Adresse>
+                    <adressvalidierungsstatusGrob id="01">Die angegebene Adresse wurde postalisch validiert.</adressvalidierungsstatusGrob>
+                </Adresskontrolle>
+            </Adresskontrollen>
+            <existenz>true</existenz>
+        </AdresskontrollModul>
+        <GerichtsdatenModul>
+            <Gerichtsmerkmale>
+                <Gerichtsmerkmal>
+                    <Person>
+                        <anrede id=""/>
+                        <vorname>Uno</vorname>
+                        <name>Acht</name>
+                        <geburtsdatum>07.07.1955</geburtsdatum>
+                        <geburtsname>Sechsundzwanzig</geburtsname>
+                    </Person>
+                    <Adresse>
+                        <strasse>Hellersbergstr.</strasse>
+                        <hausnummer>14</hausnummer>
+                        <plz>41460</plz>
+                        <ort>Neuss</ort>
+                        <laenderkennzeichen>DE</laenderkennzeichen>
+                    </Adresse>
+                    <crefonummer>5270175148</crefonummer>
+                    <vcName id="527">VC Neuss</vcName>
+                    <negativmerkmalstyp id="01">Einzelmerkmal</negativmerkmalstyp>
+                    <negativmerkmal id="940">Eidesstattliche Versicherung</negativmerkmal>
+                    <amtsgericht id="00346">41460 Neuss</amtsgericht>
+                    <meldedatum>08.07.2013</meldedatum>
+                    <anlageNegativmerkmal>11.11.2014</anlageNegativmerkmal>
+                    <uebertragenesMerkmal>false</uebertragenesMerkmal>
+                    <aktenzeichen>123/13</aktenzeichen>
+                </Gerichtsmerkmal>
+                <Gerichtsmerkmal>
+                    <Person>
+                        <anrede id=""/>
+                        <vorname>Uno</vorname>
+                        <name>Acht</name>
+                        <geburtsdatum>07.07.1955</geburtsdatum>
+                        <geburtsname>Sechsundzwanzig</geburtsname>
+                    </Person>
+                    <Adresse>
+                        <strasse>Hellersbergstr.</strasse>
+                        <hausnummer>14</hausnummer>
+                        <plz>41460</plz>
+                        <ort>Neuss</ort>
+                        <laenderkennzeichen>DE</laenderkennzeichen>
+                    </Adresse>
+                    <crefonummer>5270175148</crefonummer>
+                    <vcName id="527">VC Neuss</vcName>
+                    <negativmerkmalstyp id="01">Einzelmerkmal</negativmerkmalstyp>
+                    <negativmerkmal id="930">Haftanordnung</negativmerkmal>
+                    <amtsgericht id="00346">41460 Neuss</amtsgericht>
+                    <meldedatum>08.06.2013</meldedatum>
+                    <anlageNegativmerkmal>11.11.2014</anlageNegativmerkmal>
+                    <uebertragenesMerkmal>false</uebertragenesMerkmal>
+                    <aktenzeichen>123/13</aktenzeichen>
+                </Gerichtsmerkmal>
+            </Gerichtsmerkmale>
+            <anzahlNegativmerkmaleGesamt>2</anzahlNegativmerkmaleGesamt>
+            <anzahlVerfahren>0</anzahlVerfahren>
+            <anzahlEinzelmerkmale>2</anzahlEinzelmerkmale>
+            <existenz>true</existenz>
+        </GerichtsdatenModul>
+        <InkassodatenModul>
+            <GerichtlicheInkassomerkmale>
+                <Inkassomerkmal>
+                    <Person>
+                        <anrede id=""/>
+                        <vorname>Uno</vorname>
+                        <name>Acht</name>
+                        <geburtsdatum>07.07.1955</geburtsdatum>
+                        <geburtsname>Sechsundzwanzig</geburtsname>
+                    </Person>
+                    <Adressen>
+                        <Adresse>
+                            <strasse>Hellersbergstr.</strasse>
+                            <hausnummer>14</hausnummer>
+                            <plz>41460</plz>
+                            <ort>Neuss</ort>
+                            <laenderkennzeichen>DE</laenderkennzeichen>
+                        </Adresse>
+                    </Adressen>
+                    <crefonummer>5270175148</crefonummer>
+                    <vcName id="527">VC Neuss</vcName>
+                    <aktennummer>2</aktennummer>
+                    <verfahrensart id="02">?S</verfahrensart>
+                    <inkassotyp>false</inkassotyp>
+                    <HauptforderungPlan>
+                        <wert>3.445,00</wert>
+                        <waehrung>EUR</waehrung>
+                    </HauptforderungPlan>
+                    <eingangsdatum>01.07.2007</eingangsdatum>
+                    <verzugsdatum>30.06.2007</verzugsdatum>
+                    <erledigungskennzeichen id="0">Laufendes Verfahren (tituliert)</erledigungskennzeichen>
+                    <uebertragenesMerkmal>false</uebertragenesMerkmal>
+                </Inkassomerkmal>
+            </GerichtlicheInkassomerkmale>
+            <VorgerichtlicheInkassomerkmale>
+                <Inkassomerkmal>
+                    <Person>
+                        <anrede id=""/>
+                        <vorname>Uno</vorname>
+                        <name>Acht</name>
+                        <geburtsdatum>07.07.1955</geburtsdatum>
+                        <geburtsname>Sechsundzwanzig</geburtsname>
+                    </Person>
+                    <Adressen>
+                        <Adresse>
+                            <strasse>Hellersbergstr.</strasse>
+                            <hausnummer>14</hausnummer>
+                            <plz>41460</plz>
+                            <ort>Neuss</ort>
+                            <laenderkennzeichen>DE</laenderkennzeichen>
+                        </Adresse>
+                    </Adressen>
+                    <crefonummer>5270175148</crefonummer>
+                    <vcName id="527">VC Neuss</vcName>
+                    <aktennummer>1</aktennummer>
+                    <verfahrensart id="01">MS</verfahrensart>
+                    <inkassotyp>true</inkassotyp>
+                    <HauptforderungPlan>
+                        <wert>1,00</wert>
+                        <waehrung>EUR</waehrung>
+                    </HauptforderungPlan>
+                    <eingangsdatum>01.07.2007</eingangsdatum>
+                    <verzugsdatum>30.06.2007</verzugsdatum>
+                    <erledigungsdatum>01.11.2013</erledigungsdatum>
+                    <erledigungskennzeichen id="44">Verfahren ergebnislos, gerichtlich negativ</erledigungskennzeichen>
+                    <uebertragenesMerkmal>false</uebertragenesMerkmal>
+                </Inkassomerkmal>
+                <Inkassomerkmal>
+                    <Person>
+                        <anrede id=""/>
+                        <vorname>Uno</vorname>
+                        <name>Acht</name>
+                        <geburtsdatum>07.07.1955</geburtsdatum>
+                        <geburtsname>Sechsundzwanzig</geburtsname>
+                    </Person>
+                    <Adressen>
+                        <Adresse>
+                            <strasse>Hellersbergstr.</strasse>
+                            <hausnummer>14</hausnummer>
+                            <plz>41460</plz>
+                            <ort>Neuss</ort>
+                            <laenderkennzeichen>DE</laenderkennzeichen>
+                        </Adresse>
+                    </Adressen>
+                    <crefonummer>5270175148</crefonummer>
+                    <vcName id="527">VC Neuss</vcName>
+                    <aktennummer>3</aktennummer>
+                    <verfahrensart id="01">MS</verfahrensart>
+                    <inkassotyp>true</inkassotyp>
+                    <HauptforderungPlan>
+                        <wert>1.234,00</wert>
+                        <waehrung>EUR</waehrung>
+                    </HauptforderungPlan>
+                    <eingangsdatum>01.07.2007</eingangsdatum>
+                    <verzugsdatum>30.06.2007</verzugsdatum>
+                    <erledigungsdatum>01.11.2013</erledigungsdatum>
+                    <erledigungskennzeichen id="42">Verfahren eingestellt, da Vergleich, Konkurs, Insolvenz</erledigungskennzeichen>
+                    <uebertragenesMerkmal>false</uebertragenesMerkmal>
+                </Inkassomerkmal>
+            </VorgerichtlicheInkassomerkmale>
+            <anzahlInkassoverfahrenGesamt>3</anzahlInkassoverfahrenGesamt>
+            <anzahlAbgeschlossenerInkassoverfahrenGesamt>2</anzahlAbgeschlossenerInkassoverfahrenGesamt>
+            <existenz>true</existenz>
+        </InkassodatenModul>
+        <KontendatenModulNegativ>
+            <Konten>
+                <Konto>
+                    <Person>
+                        <anrede id=""/>
+                        <vorname>Uno</vorname>
+                        <name>Acht</name>
+                        <geburtsdatum>07.07.1955</geburtsdatum>
+                    </Person>
+                    <Adressen>
+                        <Adresse>
+                            <strasse>Hellersbergstr.</strasse>
+                            <hausnummer>14</hausnummer>
+                            <plz>41460</plz>
+                            <ort>Neuss</ort>
+                            <laenderkennzeichen>DE</laenderkennzeichen>
+                        </Adresse>
+                    </Adressen>
+                    <branche id="006">Auskunfteien</branche>
+                    <kontoverwendung id="98">andere</kontoverwendung>
+                    <finanzierungsgrund id="04">Sonstige</finanzierungsgrund>
+                    <kontonummer>CEG008</kontonummer>
+                    <vorgangsnummer>CEG008</vorgangsnummer>
+                    <einwilligungsklausel>false</einwilligungsklausel>
+                    <startdatum>15.12.2004</startdatum>
+                    <vertragslaufzeit>0</vertragslaufzeit>
+                    <zahlungsart id="99">Unbekannt</zahlungsart>
+                    <zahlungsrhythmus id="99">unbekannt</zahlungsrhythmus>
+                    <aktualisierungsmonat>01.01.2012</aktualisierungsmonat>
+                    <schlechtesterKontostatus id="K90">Konto 90 Tage im Rückstand</schlechtesterKontostatus>
+                    <merkmalsdatumSchlechtesterKontostatus>19.01.2011</merkmalsdatumSchlechtesterKontostatus>
+                    <aktuellerKontostatus id="K90">Konto 90 Tage im Rückstand</aktuellerKontostatus>
+                    <merkmalsdatumAktuellerKontostatus>19.01.2011</merkmalsdatumAktuellerKontostatus>
+                    <Saldo>
+                        <wert>89,00</wert>
+                        <waehrung>EUR</waehrung>
+                    </Saldo>
+                    <saldotyp id="02">Soll</saldotyp>
+                </Konto>
+            </Konten>
+            <anzahl>1</anzahl>
+            <existenz>true</existenz>
+        </KontendatenModulNegativ>
+        <VerflechtungsdatenModul>
+            <PersonVerflechtung>
+                <Person>
+                    <anrede id=""/>
+                    <vorname>Uno</vorname>
+                    <name>Acht</name>
+                    <geburtsdatum>07.07.1955</geburtsdatum>
+                    <geburtsname>Sechsundzwanzig</geburtsname>
+                </Person>
+                <Adressen>
+                    <Adresse>
+                        <strasse>Hellersbergstr.</strasse>
+                        <hausnummer>14</hausnummer>
+                        <plz>41460</plz>
+                        <ort>Neuss</ort>
+                        <laenderkennzeichen>DE</laenderkennzeichen>
+                    </Adresse>
+                </Adressen>
+                <crefonummer>5270175148</crefonummer>
+                <vcName id="527">VC Neuss</vcName>
+                <Verflechtungen>
+                    <Verflechtung>
+                        <verflechtungseigenschaft id="11">Gesellschafter</verflechtungseigenschaft>
+                        <Verflechtungsbetrag>
+                            <Geldbetrag>
+                                <wert>25.000,00</wert>
+                                <waehrung>EUR</waehrung>
+                            </Geldbetrag>
+                        </Verflechtungsbetrag>
+                        <verflechtungsbeteiligtenart id="02">Kapitalbeteiligter</verflechtungsbeteiligtenart>
+                        <Verflechtungsziel>
+                            <firmenname1>Uno Achte Versand Test GmbH</firmenname1>
+                            <Adresse>
+                                <strasse>Europadamm</strasse>
+                                <hausnummer>4</hausnummer>
+                                <plz>41460</plz>
+                                <ort>Neuss</ort>
+                                <laenderkennzeichen>DE</laenderkennzeichen>
+                            </Adresse>
+                            <crefoZiel>5270175152</crefoZiel>
+                            <zustaendigerVCName id="527">VC Neuss</zustaendigerVCName>
+                            <firmenrechtsform id="10001">GmbH</firmenrechtsform>
+                            <datumLetzteFirmenrecherche>20.04.2011</datumLetzteFirmenrecherche>
+                        </Verflechtungsziel>
+                    </Verflechtung>
+                    <Verflechtung>
+                        <verflechtungseigenschaft id="05">Name</verflechtungseigenschaft>
+                        <verflechtungsbeteiligtenart id="03">Funktions- und Kapitalbeteiligter</verflechtungsbeteiligtenart>
+                        <Verflechtungsziel>
+                            <firmenname1>Uno Achte Holding AG</firmenname1>
+                            <Adresse>
+                                <strasse>Europadamm</strasse>
+                                <hausnummer>4</hausnummer>
+                                <plz>41460</plz>
+                                <ort>Neuss</ort>
+                                <laenderkennzeichen>DE</laenderkennzeichen>
+                            </Adresse>
+                            <crefoZiel>5270175156</crefoZiel>
+                            <zustaendigerVCName id="527">VC Neuss</zustaendigerVCName>
+                            <firmenrechtsform id="02001">Freie Berufe</firmenrechtsform>
+                            <datumLetzteFirmenrecherche>05.06.2012</datumLetzteFirmenrecherche>
+                        </Verflechtungsziel>
+                    </Verflechtung>
+                    <Verflechtung>
+                        <verflechtungseigenschaft id="01">Inhaber</verflechtungseigenschaft>
+                        <verflechtungsbeteiligtenart id="03">Funktions- und Kapitalbeteiligter</verflechtungsbeteiligtenart>
+                        <Verflechtungsziel>
+                            <firmenname1>Undo Acht Spedition e.K.</firmenname1>
+                            <Adresse>
+                                <strasse>Europadamm</strasse>
+                                <hausnummer>4</hausnummer>
+                                <plz>41460</plz>
+                                <ort>Neuss</ort>
+                                <laenderkennzeichen>DE</laenderkennzeichen>
+                            </Adresse>
+                            <crefoZiel>5270175157</crefoZiel>
+                            <zustaendigerVCName id="527">VC Neuss</zustaendigerVCName>
+                            <firmenrechtsform id="06001">Einzelfirma</firmenrechtsform>
+                            <datumLetzteFirmenrecherche>23.03.2011</datumLetzteFirmenrecherche>
+                        </Verflechtungsziel>
+                    </Verflechtung>
+                </Verflechtungen>
+            </PersonVerflechtung>
+            <anzahl>3</anzahl>
+            <existenz>true</existenz>
+        </VerflechtungsdatenModul>
+        <RecherchedatenModul>
+            <RechercheMerkmale>
+                <RechercheMerkmal>
+                    <Person>
+                        <anrede id=""/>
+                        <vorname>Uno</vorname>
+                        <name>Acht</name>
+                        <geburtsdatum>07.07.1955</geburtsdatum>
+                        <geburtsname>Sechsundzwanzig</geburtsname>
+                    </Person>
+                    <Adressen>
+                        <Adresse>
+                            <strasse>Hellersbergstr.</strasse>
+                            <hausnummer>14</hausnummer>
+                            <plz>41460</plz>
+                            <ort>Neuss</ort>
+                            <laenderkennzeichen>DE</laenderkennzeichen>
+                        </Adresse>
+                    </Adressen>
+                    <crefonummer>5270175148</crefonummer>
+                    <vcName id="527">VC Neuss</vcName>
+                    <rechercheDatum>11.11.2014</rechercheDatum>
+                </RechercheMerkmal>
+            </RechercheMerkmale>
+            <anzahl>1</anzahl>
+            <existenz>true</existenz>
+        </RecherchedatenModul>
+        <AnschriftenModul>
+            <Anschriften>
+                <Anschrift>
+                    <Adressen>
+                        <Adresse>
+                            <strasse>Hellersbergstr.</strasse>
+                            <hausnummer>12</hausnummer>
+                            <plz>41460</plz>
+                            <ort>Neuss</ort>
+                            <laenderkennzeichen>DE</laenderkennzeichen>
+                        </Adresse>
+                    </Adressen>
+                    <adresslieferungsdatum>11.11.2014</adresslieferungsdatum>
+                    <anzahlDatenlieferantenVVC>1</anzahlDatenlieferantenVVC>
+                    <anzahlDatenlieferantenKonten>0</anzahlDatenlieferantenKonten>
+                    <adresstyp id="02">Privatadresse</adresstyp>
+                    <adressquelle id="02">VVC- und Konten-Anschrift</adressquelle>
+                    <adressbereich id="08">Wohnsitz</adressbereich>
+                    <kennzeichenFirmenadresse>false</kennzeichenFirmenadresse>
+                </Anschrift>
+                <Anschrift>
+                    <Adressen>
+                        <Adresse>
+                            <strasse>Hellersbergstr.</strasse>
+                            <hausnummer>14</hausnummer>
+                            <plz>41460</plz>
+                            <ort>Neuss</ort>
+                            <laenderkennzeichen>DE</laenderkennzeichen>
+                        </Adresse>
+                    </Adressen>
+                    <adresslieferungsdatum>09.01.2012</adresslieferungsdatum>
+                    <anzahlDatenlieferantenVVC>1</anzahlDatenlieferantenVVC>
+                    <anzahlDatenlieferantenKonten>1</anzahlDatenlieferantenKonten>
+                    <adresstyp id="02">Privatadresse</adresstyp>
+                    <adressquelle id="02">VVC- und Konten-Anschrift</adressquelle>
+                    <adressbereich id="08">Wohnsitz</adressbereich>
+                    <kennzeichenFirmenadresse>false</kennzeichenFirmenadresse>
+                </Anschrift>
+                <Anschrift>
+                    <Adressen>
+                        <Adresse>
+                            <strasse>Europadamm</strasse>
+                            <hausnummer>4</hausnummer>
+                            <plz>41460</plz>
+                            <ort>Neuss</ort>
+                            <laenderkennzeichen>DE</laenderkennzeichen>
+                        </Adresse>
+                    </Adressen>
+                    <adresslieferungsdatum>11.11.2014</adresslieferungsdatum>
+                    <anzahlDatenlieferantenVVC>1</anzahlDatenlieferantenVVC>
+                    <anzahlDatenlieferantenKonten>0</anzahlDatenlieferantenKonten>
+                    <adresstyp id="01">Firmenadresse</adresstyp>
+                    <adressquelle id="00">VVC-Anschrift</adressquelle>
+                    <adressbereich id="01">Geschäftsadresse</adressbereich>
+                    <kennzeichenFirmenadresse>true</kennzeichenFirmenadresse>
+                </Anschrift>
+                <Anschrift>
+                    <Adressen>
+                        <Adresse>
+                            <strasse>Hellersbergstr.</strasse>
+                            <hausnummer>1</hausnummer>
+                            <plz>41460</plz>
+                            <ort>Neuss</ort>
+                            <laenderkennzeichen>DE</laenderkennzeichen>
+                        </Adresse>
+                    </Adressen>
+                    <adresslieferungsdatum>11.11.2014</adresslieferungsdatum>
+                    <anzahlDatenlieferantenVVC>1</anzahlDatenlieferantenVVC>
+                    <anzahlDatenlieferantenKonten>0</anzahlDatenlieferantenKonten>
+                    <adresstyp id="02">Privatadresse</adresstyp>
+                    <adressquelle id="00">VVC-Anschrift</adressquelle>
+                    <adressbereich id="-1">Unbekannt</adressbereich>
+                    <kennzeichenFirmenadresse>false</kennzeichenFirmenadresse>
+                </Anschrift>
+            </Anschriften>
+            <anzahlAktuelleAnschriften>2</anzahlAktuelleAnschriften>
+            <anzahl>4</anzahl>
+            <existenz>true</existenz>
+        </AnschriftenModul>
+        <IdentModul>
+            <identifizierung id="01">Person/Haushalt wurde identifiziert.</identifizierung>
+            <existenz>true</existenz>
+        </IdentModul>
+        <ScoreModul>
+            <Scores>
+                <Score>
+                    <scoreTyp id="01">BONIMA Score</scoreTyp>
+                    <wert>93000</wert>
+                    <ampel id="01">rot</ampel>
+                </Score>
+            </Scores>
+            <existenz>true</existenz>
+        </ScoreModul>
+    </Module>
+</Auskunft>
