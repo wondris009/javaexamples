@@ -6,9 +6,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 
-import static org.junit.Assert.*;
-
-
 public class CompletableFutureDemo {
 
     static ExecutorService executor = Executors.newFixedThreadPool(3, new ThreadFactory() {
@@ -34,37 +31,37 @@ public class CompletableFutureDemo {
 
         CompletableFuture cf = CompletableFuture.completedFuture("message");
 
-        assertTrue(cf.isDone());
-        assertEquals("message", cf.getNow(null));
+        assert cf.isDone();
+        assert "message".equals(cf.getNow(null));
     }
 
     private static void returnAsyncExample() throws InterruptedException {
 
         CompletableFuture cf = CompletableFuture.runAsync(() -> {
-            assertTrue(Thread.currentThread().isDaemon());
+            assert Thread.currentThread().isDaemon();
             try {
                 randomSleep();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         });
-        assertFalse(cf.isDone());
+        assert !cf.isDone();
         sleepEnough();
-        assertTrue(cf.isDone());
+        assert cf.isDone();
     }
 
 
     private static void thenApplyExample() {
         CompletableFuture cf = CompletableFuture.completedFuture("message").thenApply(s -> {
-            assertFalse(Thread.currentThread().isDaemon());
+            assert !Thread.currentThread().isDaemon();
             return s.toUpperCase();
         });
-        assertEquals("MESSAGE", cf.getNow(null));
+        assert "MESSAGE".equals(cf.getNow(null));
     }
 
     private static void thenApplyAsyncExample() {
         CompletableFuture cf = CompletableFuture.completedFuture("message").thenApplyAsync(s -> {
-            assertTrue(Thread.currentThread().isDaemon());
+            assert Thread.currentThread().isDaemon();
             try {
                 randomSleep();
             } catch (InterruptedException e) {
@@ -72,14 +69,14 @@ public class CompletableFutureDemo {
             }
             return s.toUpperCase();
         });
-        assertNull(cf.getNow(null));
-        assertEquals("MESSAGE", cf.join());
+        assert cf.getNow(null) == null;
+        assert "MESSAGE".equals(cf.join());
     }
 
     private static void thenApplyAsyncWithExecutorExample() {
         CompletableFuture cf = CompletableFuture.completedFuture("message").thenApplyAsync(s -> {
-            assertTrue(Thread.currentThread().getName().startsWith("custom-executor-"));
-            assertFalse(Thread.currentThread().isDaemon());
+            assert Thread.currentThread().getName().startsWith("custom-executor-");
+            assert !Thread.currentThread().isDaemon();
             try {
                 randomSleep();
             } catch (InterruptedException e) {
@@ -88,8 +85,8 @@ public class CompletableFutureDemo {
             return s.toUpperCase();
         }, executor);
 
-        assertNull(cf.getNow(null));
-        assertEquals("MESSAGE", cf.join());
+        assert cf.getNow(null) == null;
+        assert "MESSAGE".equals(cf.join());
     }
 
     private static void thenAcceptAsyncExample() {
@@ -98,7 +95,7 @@ public class CompletableFutureDemo {
                 .thenAcceptAsync(s -> result.append(s.toUpperCase()));
         cf.join();
         System.out.println(result.toString());
-        assertTrue("Result was empty", result.length() > 0);
+        assert result.length() > 0;
     }
 
 
