@@ -38,6 +38,7 @@ dependencies {
     compile('javax.persistence:javax.persistence-api:2.2')
 
     compile 'org.projectlombok:lombok:1.18.2'
+    compile group: 'joda-time', name: 'joda-time', version: '2.10.5'
 
     compile group: 'org.slf4j', name:'slf4j-api', version: '1.7.25'
     compile group: 'ch.qos.logback', name:'logback-classic', version: '1.2.3'
